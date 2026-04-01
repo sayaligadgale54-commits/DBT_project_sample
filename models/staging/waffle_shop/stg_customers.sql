@@ -4,6 +4,6 @@ with customers as (
         id as customer_id,
         first_name,
         last_name
-    from raw.schema_shop.customers
+    from {{ source('waffle_shop','customers')}}
 )
 select * from customers
