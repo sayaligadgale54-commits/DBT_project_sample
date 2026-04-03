@@ -4,15 +4,8 @@ sources:
   - name: waffle_shop
     database: RAW
     schema: SCHEMA_SHOP
+
     tables:
       - name: customers
 
       - name: orders
-        loaded_at_field: _etl_loaded_at
-        freshness:
-          warn_after:
-            count: 200
-            period: hour
-          error_after:
-            count: 250
-            period: hour
